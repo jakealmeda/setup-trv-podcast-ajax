@@ -75,7 +75,7 @@
 						    //alert("Substring found!");
 
 			            	// insert iFrame
-			            	var iFrame = $( '<iframe id="thepage_' + GPCTrimmed[ 1 ] + '" ></iframe>');
+			            	var iFrame = $( '<iframe class="item showhide" id="thepage_' + GPCTrimmed[ 1 ] + '" ></iframe>');
 			            	$( "#" + ContainerID ).slideDown( SlideSpeed ).append( iFrame );
 
 			                var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
