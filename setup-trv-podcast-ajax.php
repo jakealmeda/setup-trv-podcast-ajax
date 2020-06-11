@@ -18,8 +18,13 @@ add_shortcode( 'setup-play-podcast', 'setup_play_podcast_ajax_main_function' );
 function setup_play_podcast_ajax_main_function( $atts ) {
 
     // validate template name (this should be without the extension name '.php')
-    if( $atts[ 'template' ] ) {
-        $template = $atts[ 'template' ];
+    //if( $atts[ 'template' ] ) {
+    if( is_array( $atts ) ){
+
+        if( array_key_exists( "template", $atts ) ) {
+            $template = $atts[ 'template' ];
+        }
+        
     } else {
         // assign default output
         $template = 'default-trv-podcast-ajax';
